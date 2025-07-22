@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow Contato</title>
+    <link rel="icon" type="image/x-icon" href="img/overflow.ico">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Menu Superior -->
+     <div class="menuSuperior">
+        <div>
+            <img src="img/overflow.svg" alt="Logo" width="125px" style="margin-left: 125%;">
+        </div>
+        <div style="font-size: 20px; margin-right: 25%; display: flex; transform: translateY(25%);">
+            <div class="divisoriaMenu"></div>
+            <a href="Pagina_Inicial.html">Início</a>
+            <div class="divisoriaMenu"></div>
+            <a href="Dicas.html">Dicas</a>
+            <div class="divisoriaMenu"></div>
+            <a href="Contato.html">Contato</a>
+            <div class="divisoriaMenu"></div>
+        </div>
+     </div>
+    <!-- Conteúdo da página de contato-->
+     <div class="conteudo" style="flex-direction: column; text-align: center;">
+        <h2>Quer participar da Overflow?</h2>
+        <p>Preencha o formulário abaixo e analisaremos seu pedido em breve.</p>
+        <br>
+        <form>
+            <div style="display: flex; justify-content: space-between;">
+                <div style="width: 15%; margin-right: 3%;">
+                    <p style="color: black; text-align: left; margin-bottom: 0;">Nome:</p>
+                    <input type="text" placeholder="Seu Nome" class="formulario" id="Nome">
+                </div>
+                <div style="width: 30%;">
+                    <p style="color: black; text-align: left; margin-bottom: 0;">Seu e-mail:</p>
+                    <input type="email" placeholder="seuemail@gmail.com" class="formulario" id="Email">
+                </div>
+                <div style="width: 45%;">
+                    <p style="color: black; text-align: left; margin-bottom: 0;">Sua steam:</p>
+                    <input type="url" placeholder="https://steamcommunity/id/SuaSteam" class="formulario" id="Steam">
+                </div>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+                <div style="width: 40%;">
+                    <p style="color: black; text-align: left; margin-bottom: 0;">Seu rank no CS2</p>
+                    <input type="number" placeholder="15000" class="formulario" id="RankCS">
+                </div>
+                <div style="width: 50%;">
+                    <p style="color: black; text-align: left; margin-bottom: 0;">Função</p>
+                    <select id="Funcao" class="formulario">
+                        <option value="Entry">Entry Fragger</option>
+                        <option value="Rifler">Rifler</option>
+                        <option value="AWP">AWP</option>
+                        <option value="Suporte">Suporte</option>
+                        <option value="IGL">IGL</option>
+                    </select>
+                </div>
+            </div>
+            <div style="display: flex;">
+                <div class="slidecontainer">
+                    <p style="font-size: 1vw; font-weight: normal; color: black;">Seu nível Faceit (deixe zero caso não possua)</p>
+                    <input type="range" min="0" max="10" value="0" onclick="atualizarSlider()" id="SliderFI">
+                    <p id="LVFI" style="color: black;">0</p>
+                </div>
+                <div class="slidecontainer">
+                    <p style="font-size: 1vw; font-weight: normal; color: black;">Seu nível Gamersclub (deixe zero caso não possua)</p>
+                    <input type="range" min="0" max="20" value="0" onclick="atualizarSlider()" id="SliderGC">
+                    <p id="LVGC" style="color: black;">0</p>
+                </div>
+            </div>
+        </form>
+        <br>
+        <button onclick="enviarFormulario()">Enviar formulário</button>
+        <br><br><br>
+        <p style="font-weight: normal;">Caso tenha alguma dúvida, contate-nos pelo e-mail: <b>contato.overflowteam@gmail.com</b> ou pelo discord: <a href="https://discord.gg/fFU6m3Ugwb">https://discord.gg/MafiaDoUltra</a>.</p>
+     </div>
+     <!-- Menu Inferior -->
+    <div class="menuInferior" style="position: absolute;">
+        <p>© 2022 Overflow Team. Todos os direitos reservados.</p>
+        <p>Desenvolvido por <a href="https://www.instagram.com/gui_centenaro/" style="font-weight: bold;">Ultra</a></p>
+    </div>
+</body>
+</html>
